@@ -18,4 +18,9 @@ public class DataControler : MonoBehaviour
     {
         DataHolder.LoadGame();
     }
+
+    public void SetChapter(int chapter)
+    {
+        DataHolder.Chapter = chapter;
+    }
 }
