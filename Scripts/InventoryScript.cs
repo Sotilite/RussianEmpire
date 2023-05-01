@@ -9,8 +9,8 @@ public class InventoryScript : MonoBehaviour
 
     public void Awake()
     {
-        xpInfo.text = $"Заработано очков: {DataHolder.XP}";
-        levelsInfo.text = $"Пройдено уровней: {DataHolder.LevelMax}";
+        xpInfo.text = $"{DataHolder.XP} XP";
+        levelsInfo.text = $"{DataHolder.LevelMax} / 12";
     }
 
     public void ResetData()
