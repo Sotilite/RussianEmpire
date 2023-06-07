@@ -31,7 +31,9 @@ public class ClosedLessons : MonoBehaviour
         var lvl = DataHolder.LevelMax + 1;
         var chapter = DataHolder.Chapter;
         var actualLevel = 0;
-        if (lvl > chapter * 4)
+        if (chapter == 0)
+            actualLevel = lvl;
+        else if (lvl > chapter * 4)
             actualLevel = 5;
         else if (lvl > (chapter - 1) * 4)
             actualLevel = (lvl - (chapter - 1) * 4);

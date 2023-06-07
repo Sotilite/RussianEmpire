@@ -53,6 +53,12 @@ public static class DataHolder
         DataHolder.XP = 0;
         DataHolder.ChestMax = 0;
         DataHolder.Money = 0;
+        DataHolder.ChosenTheme = 0;
+        DataHolder.HasFirstTheme = false;
+        DataHolder.HasSecondTheme = false;
+        DataHolder.HasThirdTheme = false;
+        DataHolder.HasDoneFirstStory = false;
+        SaveGame();
     }
 
     public static void LoadGame()
