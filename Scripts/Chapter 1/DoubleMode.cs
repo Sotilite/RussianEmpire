@@ -83,6 +83,7 @@ public class DoubleMode : MonoBehaviour
         else
         {
             var points = questionsCount * 5 - (mistakesCount % (questionsCount * 3));
+            DataHolder.IncreaseMoney(points);
             DataHolder.IncreaseXP(points);
             DataHolder.LevelDone();
             DataHolder.SaveGame();

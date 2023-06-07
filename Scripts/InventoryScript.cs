@@ -10,7 +10,7 @@ public class InventoryScript : MonoBehaviour
     public void Awake()
     {
         xpInfo.text = $"{DataHolder.XP} XP";
-        levelsInfo.text = $"{DataHolder.LevelMax} / 12";
+        levelsInfo.text = $"{DataHolder.LevelMax} / 36";
     }
 
     public void ResetData()

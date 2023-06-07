@@ -30,8 +30,15 @@ public class ClosedLessons : MonoBehaviour
     {
         var lvl = DataHolder.LevelMax + 1;
         var chapter = DataHolder.Chapter;
-        var lvlForPage = lvl - (chapter - 1) * 4;
-        var actualLevel = lvlForPage > 0 ? lvlForPage % 6 : 0;
+        var actualLevel = 0;
+        if (lvl > chapter * 4)
+            actualLevel = 5;
+        else if (lvl > (chapter - 1) * 4)
+            actualLevel = (lvl - (chapter - 1) * 4);
+        else
+            actualLevel = 0;
+        //var lvlForPage = lvl - (chapter - 1) * 4;
+        //var actualLevel = lvlForPage > 0 ? lvlForPage % 4 : 0;
         var actualChest = DataHolder.ChestMax - (chapter - 1) * 2;
         switch (actualLevel)
         {
@@ -107,6 +114,7 @@ public class ClosedLessons : MonoBehaviour
 
     private static void OpenChest()
     {
+        DataHolder.IncreaseMoney(25);
         DataHolder.ChestMax++;
         DataHolder.SaveGame();
     }
