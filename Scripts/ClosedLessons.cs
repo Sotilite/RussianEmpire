@@ -116,7 +116,8 @@ public class ClosedLessons : MonoBehaviour
 
     private static void OpenChest()
     {
-        DataHolder.IncreaseMoney(25);
+        var rnd = new System.Random();
+        DataHolder.IncreaseMoney(rnd.Next(25, 75));
         DataHolder.ChestMax++;
         DataHolder.SaveGame();
     }

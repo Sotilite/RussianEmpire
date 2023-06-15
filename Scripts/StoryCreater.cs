@@ -25,7 +25,10 @@ public class StoryCreater : MonoBehaviour
     {
         StoryIndex = DataHolder.Chapter;
         if (DataHolder.HasDoneFirstStory && StoryIndex == 0)
+        {
+            DataHolder.Chapter = 1;
             SceneManager.LoadScene("Menu 1");
+        }
         switch (StoryIndex)
         {
             case 0:
